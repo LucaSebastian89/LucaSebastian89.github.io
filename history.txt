@@ -1,0 +1,42 @@
+Construyendo el proyecto - Configuracion desde el Principio
+
+1 - Creamos la Carpeta del proyecto
+2 - inicializamos el repositorio git
+3 - inicializamos el proyecto con npm.
+        npm init -y
+        creamos el package.json donde esta toda la informacion del proyecto
+
+4 - estructuramos nuestro proyecto
+        organizamos nuestros elementos, respetando el estandar del mercado.
+        creamos la carpeta donde va todo el codigo. la llamamos "src"
+        creamos la carpeta "public" donde van todos los elementos que vamos a publicar cuando lo mandemos a produccion.
+        dentro de nuestro src creamos "components" para los componentes de React
+        creamos los archivos de entrada index.js y index.html, en src y public respectivamente
+
+5 - instalamos React
+        npm install react react-dom
+        implementamos el metodo reactdom.render en index.js
+        y lo mostramos en index.html
+
+6 - instalamos Babel
+        npm install @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+        creamos .babelrc donde haremos la configuracion de babel
+
+7 - instalamos Webpack
+        npm install webpack webpack-cli html-webpack-plugin html-loader --save-dev
+        creamos el archivo webpck.config.js hacemos las configuraciones.
+        creamos el script para compilar
+        instalamos webpack-dev-server
+        creamos el script para ejecutar el webpack-dev-server en modo de desarrollo
+
+8 - instalamos lo necesario para trabajar con Sass
+        npm install mini-css-extract-plugin css-loader node-sass sass-loader --save-dev
+        configuramos el archivo webpack.config.js
+
+9 - instalamos Eslint
+        npm install eslint babel-eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y
+        traemos la configuracion de eslint desde un gist en github
+        creamos .eslintrc y copiamos la configuracion
+        
+10 - creamos gitignore
+
