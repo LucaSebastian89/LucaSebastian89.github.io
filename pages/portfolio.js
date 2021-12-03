@@ -13,8 +13,8 @@ const Portfolio = () => (
                         </Card.Title>
                         <Card.Body>
                             <Row>
-                                {projects.map(({ name, description, image }) => (
-                                    <Col md={4} className="py-2">
+                                {projects.map(({ name, description, image }, i) => (
+                                    <Col md={4} className="py-2" key={i}>
                                         <Card className="h-100">
                                             <div className="overflow">
                                                 <Card.Img variant="top" src={image} />

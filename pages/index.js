@@ -38,9 +38,9 @@ const Index = () => (
                     <Card.Body>
                         <h1>Skills</h1>
                         {
-                            skills.map((skill, i) => (
+                            skills.map((skill, index) => (
                                 <SkillBar
-                                    skillIndex={i}
+                                    key={index}
                                     skillName={skill.skill}
                                     skillValue={skill.percentage} />
                             ))
@@ -83,18 +83,18 @@ const Index = () => (
                     </Card.Title>
                     <Card.Body>
                         <Row>
-                            {projects.map(({name, description, image}) => (
-                                <Col md={4} className="py-2">
-                                <Card className="h-100">
-                                    <div className="overflow">
-                                        <Card.Img variant="top" src={image} />
-                                    </div>
-                                    <Card.Body>
-                                        <Card.Title>{name}</Card.Title>
-                                        <Card.Text>{description}</Card.Text>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
+                            {projects.map(({name, description, image}, i) => (
+                                <Col md={4} className="py-2" key={i}>
+                                    <Card className="h-100">
+                                        <div className="overflow">
+                                            <Card.Img variant="top" src={image} />
+                                        </div>
+                                        <Card.Body>
+                                            <Card.Title>{name}</Card.Title>
+                                            <Card.Text>{description}</Card.Text>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
                             ))} 
                         </Row>
                     </Card.Body>
