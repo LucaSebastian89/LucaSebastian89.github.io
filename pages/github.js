@@ -1,11 +1,16 @@
 import Layout from "../components/Layout";
 import { Row, Col, Card } from 'react-bootstrap';
+import Error from './_error';
 
 
-const Github = ({ user }) => {
-    console.log(user)
+const Github = ({ user, statusCode }) => {
+    
+    if (statusCode) {
+        return <Error />
+    }
+
     return (
-        <Layout>
+        <Layout footer={false} dark>
             <Row>
                 <Col md={{ span: 6, offset: 3 }}>
                     <Card>
@@ -27,10 +32,15 @@ const Github = ({ user }) => {
 export async function getServerSideProps() {
     const res = await fetch('https://api.github.com/users/LucaSebastian89');
     const data = await res.json();
+
+    const statusCode = res.status > 200 ? res.status : false;
+
+
     console.log(data);
     return {
         props: {
-            user: data
+            user: data,
+            statusCode
         }
     }
 }

@@ -87,3 +87,21 @@ export const projects = [
         image: "portfolio6.jpeg"
     }
 ]
+
+export const posts = [
+    {
+        title: "React",
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+        imageUrl: "https://blog.facialix.com/wp-content/uploads/2021/04/2-2.jpg",
+    },
+    {
+        title: "Angular",
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+        imageUrl: "https://miro.medium.com/max/1280/1*oI32P7xHwEsd2TaV6_GUWA.jpeg",
+    },
+    {
+        title: "Vue",
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+        imageUrl: "https://somospnt.com/images/blog/articulos/76-primeros-pasos-vue/1_rUSELI8b_jDFSvRwAaRsRQ.jpg",
+    }
+]
