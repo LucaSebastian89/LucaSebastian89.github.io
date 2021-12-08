@@ -3,7 +3,9 @@ import { posts } from "../profile";
 import { Card, Col, Row, Button } from "react-bootstrap";
 import Link from 'next/link';
 
-const PostCard = ({ post }) => (
+const PostCard = ({ post }) => {
+    
+    return (
     <Col md={4}>
         <Card>
             <div className="overflow">
@@ -18,10 +20,9 @@ const PostCard = ({ post }) => (
             </Card.Body>
         </Card>
     </Col>
-)
+)}
 
 const Blog = () => {
-    console.log(posts)
     return (
         <Layout footer={false} title="My Blog" >
             <Row md={12}>
